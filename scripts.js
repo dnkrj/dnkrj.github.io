@@ -1,6 +1,4 @@
-var feed = new Instafeed({
-    get: 'tagged',
-    tagName: 'awesome',
-    clientId: 'YOUR_CLIENT_ID'
+window.addEventListener('scroll', () => {
+	document.querySelector('.horizontal').hidden = document.body.scrollTop > document.body.scrollLeft;
+	document.querySelector('.vertical').hidden = document.body.scrollLeft > document.body.scrollTop;
 });
-feed.run();
