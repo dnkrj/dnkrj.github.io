@@ -24,7 +24,7 @@ header h1 {
   font-size: 72px;
 }
 
-.horizontal:not([hidden]) {
+.horizontal {
   display: flex;
   position: absolute;
   top: 0;
@@ -33,6 +33,10 @@ header h1 {
 
 .horizontal, .horizontal section {
   flex-direction: row;
+}
+
+.vertical.isHidden, .horizontal.isHidden {
+  display: none;
 }
 
 img {
