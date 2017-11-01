@@ -1,4 +1,4 @@
 window.addEventListener('scroll', () => {
-	document.querySelector('.horizontal').classList.toggle('isHidden', document.body.scrollTop > document.body.scrollLeft);
-	document.querySelector('.vertical').classList.toggle('isHidden', document.body.scrollLeft > document.body.scrollTop);
+	document.querySelector('.horizontal').classList.toggle('isHidden', window.scrollY > window.scrollX);
+	document.querySelector('.vertical').classList.toggle('isHidden', window.scrollX > window.scrollY);
 });
