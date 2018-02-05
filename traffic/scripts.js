@@ -1,5 +1,5 @@
-const NUMBER_OF_CARS = 30;
-const NUMBER_OF_ROWS = 14;
+const NUMBER_OF_CARS = 50;
+const NUMBER_OF_ROWS = 20;
 const MAX_SPEED = 40;
 const STARTING_DISTANCE = 200;
 const MINIMUM_DISTANCE = 20;
@@ -10,7 +10,7 @@ const SLOWDOWN = 5000;
 const PI = 3.14
 
 class Car {
-	constructor(t, row, color, opt_following) {
+  constructor(t, row, color, opt_following) {
     this.t = t;
     this.row = row;
     this.color = color;
@@ -42,7 +42,7 @@ class Car {
     this.element.style.color =
         this.nextSpeed < this.speed ? '#8069ff' : this.color;
     this.speed = this.nextSpeed;
-  	this.t += this.speed;
+    this.t += this.speed;
     this.element.style.left = Math.floor(
         window.innerWidth / 2 +
             ((INNER_RADIUS + this.row * ROW_DISTANCE) *
@@ -51,7 +51,6 @@ class Car {
         window.innerHeight / 2 +
             ((INNER_RADIUS + this.row * ROW_DISTANCE) *
                 Math.sin(this.t / SLOWDOWN))) + 'px';
-  	requestAnimationFrame(() => this.animate());
   }
 }
 
@@ -74,14 +73,23 @@ class Leader extends Car {
   }
 }
 
+const cars = [];
+
 for (let row = 1; row < NUMBER_OF_ROWS + 1; row++) {
   let leader = new Leader(NUMBER_OF_CARS, row);
-  leader.animate();
+  cars.push(leader);
   for (let c = 1; c < NUMBER_OF_CARS; c++) {
     const value = Math.floor(c / NUMBER_OF_CARS * 100);
     const color = `hsl(12, 83%, ${value}%)`;
     let car = new Car((NUMBER_OF_CARS - c), row, color, leader);
     leader = car;
-    leader.animate();
+    cars.push(leader);
   }
 }
+
+const animate = () => {
+  cars.forEach(car => car.animate());
+  requestAnimationFrame(animate);
+}
+
+animate();
