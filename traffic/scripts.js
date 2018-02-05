@@ -1,5 +1,5 @@
-const NUMBER_OF_CARS = 50;
-const NUMBER_OF_ROWS = 20;
+const NUMBER_OF_CARS = 30;
+const NUMBER_OF_ROWS = 14;
 const MAX_SPEED = 40;
 const STARTING_DISTANCE = 200;
 const MINIMUM_DISTANCE = 20;
@@ -7,7 +7,6 @@ const ACCELERATION = 1;
 const INNER_RADIUS = 100;
 const ROW_DISTANCE = 15;
 const SLOWDOWN = 5000;
-const PI = 3.14
 
 class Car {
   constructor(t, row, color, opt_following) {
@@ -63,7 +62,7 @@ class Leader extends Car {
   updateSpeed() {
     super.updateSpeed();
     if (Math.floor(this.t / MAX_SPEED) ==
-        Math.floor(SLOWDOWN * PI / MAX_SPEED)) {
+        Math.floor(SLOWDOWN * Math.PI / MAX_SPEED)) {
       this.nextSpeed = 1;
     }
   }
