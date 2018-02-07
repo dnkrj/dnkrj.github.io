@@ -1,0 +1,39 @@
+.container {
+  position: absolute;
+  top: 0;
+}
+
+.messages {
+  width: 100%;
+  max-width: 400px;
+  text-align: right;
+}
+
+.message {
+  font-size: 20px;
+  padding: 5px 12px;
+  margin: 0;
+  color: #E9EBFF;
+  border-right: 2px solid #E9EBFF;
+}
+
+em {
+  background-image: linear-gradient(#f5a38f, #f5a38f);
+  background-repeat: repeat-x;
+  background-size: 2px 2px;
+  background-position: 0 21px;
+}
+
+input {
+  width: 100%;
+  background: #3c39a6;
+  color: #E9EBFF;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #E9EBFF;
+  font-family: serif;
+  font-size: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-top: 20px; 
+}
