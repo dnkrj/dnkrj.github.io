@@ -1,86 +1,90 @@
 body {
   font-family: serif;
   margin: 0;
-  background: #34318F;
-  color: #e9ebff;
-}
-
-.background {
-  background: #e9ebff;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: -1;
+  background: #fff7ed;
+  color: black;
 }
 
 header, section {
-  height: 100vh;
   width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
+  max-width: 400px;
+  margin: 100px 200px;
+}
+
+@media only screen and (max-width: 800px) {
+  header, section {
+    margin-left: 0 !important;
+  }
 }
 
 h1 {
-  font-size: 24px;
+  font-size: 100px;
   font-weight: 300;
-  margin: 24px;
+  margin: 30px 20px;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
 }
 
-header h1 {
-  font-size: 72px;
-}
-
-.horizontal {
-  display: flex;
-  position: absolute;
-  top: 0;
-  left: 100vw;
-}
-
-.horizontal, .horizontal section {
-  flex-direction: row;
-}
-
-.vertical.isHidden, .horizontal.isHidden {
-  display: none;
-}
-
-img {
-  max-height: 65vh;
-  max-width: 65vw;
-  margin: 10px;
-  box-sizing: border-box;
+header p {
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  margin: 10px 20px;
 }
 
 p {
-  font-size: 20px;
-  max-width: 400px;
-  margin: 24px;
-}
-
-section p {
-  font-size: 24px;
+  font-size: 18px;
+  margin: 30px 20px;
 }
 
 a {
-  color: #AB9CFF;
+  color: black;
+  opacity: 0.5;
+}
+
+a:hover {
+  opacity: 1;
+}
+
+a[href*="//"] {
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(transparent,transparent),url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2212%22 height=%2212%22%3E %3Cpath fill=%22%23fff7ed%22 stroke=%22black%22 d=%22M1.5 4.518h5.982V10.5H1.5z%22/%3E %3Cpath fill=%22black%22 d=%22M5.765 1H11v5.39L9.427 7.937l-1.31-1.31L5.393 9.35l-2.69-2.688 2.81-2.808L4.2 2.544z%22/%3E %3Cpath fill=%22%23fff7ed%22 d=%22M9.995 2.004l.022 4.885L8.2 5.07 5.32 7.95 4.09 6.723l2.882-2.88-1.85-1.852z%22/%3E %3C/svg%3E");
+  padding-right: 13px;
+}
+
+ul {
+  padding: 0;
 }
 
 li {
   list-style: none;
 }
 
-/* Traffic */
+.traffic {
+  background: #34318F;
+  color: #d4d1ff;
+}
 
-.car {
+.traffic header, .traffic section {
+  margin: 20px;
+}
+
+.traffic h1 {
+  -webkit-text-stroke-color: #d4d1ff;
+  font-size: 80px;
+}
+
+.traffic a {
+  color: #d4d1ff;
+}
+
+.traffic .car {
     position: absolute;
 }
 
-.car::after {
+.traffic .car::after {
     content: '+';
 }
