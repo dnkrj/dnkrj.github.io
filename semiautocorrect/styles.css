@@ -1,6 +1,33 @@
+body {
+  background: #e6af4b;
+  color: #334431;
+}
+
+header, section {
+  margin: 20px;
+}
+
+h1 {
+  -webkit-text-stroke-color: #334431;
+  font-size: 80px;
+}
+
+a {
+  color: #334431;
+}
+
 .container {
   position: absolute;
   top: 0;
+  height: 100vh;
+  width: 100vw;
+  max-width: 100vw;
+  margin: 0;
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
 
 .messages {
@@ -13,12 +40,11 @@
   font-size: 20px;
   padding: 5px 12px;
   margin: 0;
-  color: #E9EBFF;
-  border-right: 2px solid #E9EBFF;
+  border-right: 2px solid #334431;
 }
 
 em {
-  background-image: linear-gradient(#f5a38f, #f5a38f);
+  background-image: linear-gradient(#e05038, #e05038);
   background-repeat: repeat-x;
   background-size: 2px 2px;
   background-position: 0 21px;
@@ -26,11 +52,11 @@ em {
 
 input {
   width: 100%;
-  background: #3c39a6;
-  color: #E9EBFF;
+  background: #d8a446;
+  color: #334431;
   outline: none;
   border: none;
-  border-bottom: 2px solid #E9EBFF;
+  border-bottom: 2px solid #334431;
   font-family: serif;
   font-size: 20px;
   padding: 10px;

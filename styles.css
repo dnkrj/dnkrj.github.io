@@ -62,29 +62,3 @@ ul {
 li {
   list-style: none;
 }
-
-.traffic {
-  background: #34318F;
-  color: #d4d1ff;
-}
-
-.traffic header, .traffic section {
-  margin: 20px;
-}
-
-.traffic h1 {
-  -webkit-text-stroke-color: #d4d1ff;
-  font-size: 80px;
-}
-
-.traffic a {
-  color: #d4d1ff;
-}
-
-.traffic .car {
-    position: absolute;
-}
-
-.traffic .car::after {
-    content: '+';
-}
