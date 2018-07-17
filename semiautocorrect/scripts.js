@@ -3,8 +3,10 @@ const messages = [
   [..."Type messages in the input below."],
   [..."Use ⏎ to send the message."],
   [..."Messages begining with * will used for corrections."],
-  [..."Try correcting this mistack."],
+  [..."Try correcting this mistke."],
 ];
+
+const BREAK_CHARACTERS = new Set([' ', '.', ',', '!', '?']);
 
 const corrections = [[], [], [], []];
 corrections[2].push({start: 38, end: 50});
@@ -25,10 +27,38 @@ const mergeIntervals = correction => {
 }
 
 const search = (message, correction) => {
-  const start = message.indexOf(correction[0]);
-  const end = start + correction.length;
-  const score = start == -1 ? 1 : 0;
-  return {start, end, score};
+  const results = [];
+  let result = {start: 0, end: 0, score: 999999999999};
+  for (let start = 0; start < message.length; start++) {
+    if (message[start - 1] != ' ' && start != 0) {
+      continue;
+    }
+
+    let score = 0;
+    for (let i = 0; i < correction.length; i++) {
+      if (message[i + start] != correction[i]) {
+        score++;
+      }
+    }
+
+    let a = 0;
+    for (a; a < correction.length; a++) {
+      if ((BREAK_CHARACTERS.has(message[start + correction.length + a]) || start + correction.length + a > message.length) && !BREAK_CHARACTERS.has(message[start + correction.length + a + 1])) {
+        break;
+      }
+      if ((BREAK_CHARACTERS.has(message[start + correction.length - a]) || start + correction.length - a > 0) && !BREAK_CHARACTERS.has(message[start + correction.length - a - 1])) {
+        a = -a;
+        break;
+      }
+      score++;
+    }
+    const end = start + correction.length + Math.abs(a);
+    if (score > result.score) {
+      continue;
+    }
+    result = {start, end, score};
+  }
+  return result;
 }
 
 const submit = (event) => {
@@ -56,7 +86,7 @@ const submit = (event) => {
   const correction = message.slice(1);
   const elements = [...document.querySelectorAll('.message')];
   const searches = messages.map(m => search(m, correction));
-  const scores = searches.map(({score}) => score);
+  const scores = searches.map((result) => result.score);
   const lowestScore = Math.min(...scores);
   const index = scores.lastIndexOf(lowestScore);
   const {start, end} = searches[index];

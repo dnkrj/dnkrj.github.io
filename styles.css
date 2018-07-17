@@ -21,6 +21,7 @@ h1 {
   font-size: 100px;
   font-weight: 300;
   margin: 30px 20px;
+  word-break: break-word;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
