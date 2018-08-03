@@ -28,7 +28,7 @@ const mergeIntervals = correction => {
 
 const search = (message, correction) => {
   const results = [];
-  let result = {start: 0, end: 0, score: 999999999999};
+  let result = {start: 0, end: 0, score: Number.MAX_VALUE};
   for (let start = 0; start < message.length; start++) {
     if (message[start - 1] != ' ' && start != 0) {
       continue;
@@ -43,16 +43,20 @@ const search = (message, correction) => {
 
     let a = 0;
     for (a; a < correction.length; a++) {
-      if ((BREAK_CHARACTERS.has(message[start + correction.length + a]) || start + correction.length + a > message.length) && !BREAK_CHARACTERS.has(message[start + correction.length + a + 1])) {
+      if (BREAK_CHARACTERS.has(message[start + correction.length + a]) || start + correction.length + a > message.length) {
         break;
       }
-      if ((BREAK_CHARACTERS.has(message[start + correction.length - a]) || start + correction.length - a > 0) && !BREAK_CHARACTERS.has(message[start + correction.length - a - 1])) {
+      if (BREAK_CHARACTERS.has(message[start + correction.length - a]) || start + correction.length - a > 0) {
         a = -a;
         break;
       }
       score++;
     }
-    const end = start + correction.length + Math.abs(a);
+
+    let end = start + correction.length + Math.abs(a);
+    if (start + correction.length + a > message.length && BREAK_CHARACTERS.has(message[message.length - 1])) {
+      end = message.length - 1;
+    }
     if (score > result.score) {
       continue;
     }

@@ -1,0 +1,17 @@
+body {
+  background: #F7E1D7;
+  color: #4A5759;
+}
+
+header, section {
+  margin: 20px;
+}
+
+h1 {
+  -webkit-text-stroke-color: #A0B3A1;
+  font-size: 64px;
+}
+
+a {
+  color: #4A5759;
+}

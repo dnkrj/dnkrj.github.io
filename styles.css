@@ -60,6 +60,6 @@ ul {
   padding: 0;
 }
 
-li {
+ul li {
   list-style: none;
 }

@@ -1,0 +1,20 @@
+body {
+  background: #F6CACA;
+  color: #0A014F;
+}
+
+header, section {
+  margin: 20px;
+}
+
+.heading {
+  fill: none;
+  stroke: #EF3054;
+  stroke-width: 1px;
+  letter-spacing: 3px;
+  font-size: 80px;
+}
+
+a {
+  color: #0A014F;
+}
