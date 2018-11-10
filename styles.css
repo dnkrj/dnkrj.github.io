@@ -45,8 +45,10 @@ a {
   opacity: 0.5;
 }
 
-a:hover {
+a:hover,
+a:focus {
   opacity: 1;
+  outline: none;
 }
 
 a[href*="//"] {
