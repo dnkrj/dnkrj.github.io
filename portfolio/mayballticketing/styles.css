@@ -4,7 +4,7 @@ body {
 }
 
 h1 {
-  -webkit-text-stroke-color: #bbbbbb;
+  -webkit-text-stroke-color: #c5557d;
   font-size: 64px;
 }
 
@@ -13,5 +13,5 @@ a {
 }
 
 section {
-	top: 220px;
+	top: 240px;
 }
