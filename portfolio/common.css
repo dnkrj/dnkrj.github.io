@@ -1,5 +1,6 @@
 header, section {
   margin: 20px;
+  max-width: 360px;
   top: 0;
 }
 

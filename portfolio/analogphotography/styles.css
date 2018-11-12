@@ -13,5 +13,9 @@ a {
 }
 
 section {
-	top: 240px;
+	top: 230px;
+}
+
+header, section {
+	max-width: 400px;
 }
