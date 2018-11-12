@@ -58,10 +58,11 @@ a[href*="//"] {
   padding-right: 13px;
 }
 
-ul {
+ul, ol {
   padding: 0;
+  margin: 0;
 }
 
-ul li {
+ul li, ol li {
   list-style: none;
 }

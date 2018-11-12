@@ -1,15 +1,18 @@
-body {
-  background: #000500;
-  color: #9B9ECE;
-}
-
 header, section {
   margin: 20px;
 }
 
 h1 {
-  -webkit-text-stroke-color: #473BF0;
   font-size: 80px;
+}
+
+body {
+  background: #000500;
+  color: #9B9ECE;
+}
+
+h1 {
+  -webkit-text-stroke-color: #473BF0;
 }
 
 a {
@@ -17,16 +20,15 @@ a {
 }
 
 .preview {
-	position: fixed;
-	pointer-events: none;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 420px;
-	width: auto;
-	margin: 0;
-	background-position: center;
-	background-: center;
-	background-size: 200px;
-
+  position: fixed;
+  pointer-events: none;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 420px;
+  width: auto;
+  margin: 0;
+  background-position: center;
+  background-: center;
+  background-size: 200px;
 }

@@ -1,0 +1,21 @@
+body {
+  background: #f9fceb;
+  color: #0e100d;
+}
+
+h1 {
+  -webkit-text-stroke-color: #05e37c;
+  font-size: 64px; 
+}
+
+a {
+  color: #0e100d;
+}
+
+section {
+	top: 280px;
+}
+
+li {
+	margin-top: 100px;
+}

@@ -1,0 +1,17 @@
+body {
+  background: #000000;
+  color: #ccccd7;
+}
+
+h1 {
+  -webkit-text-stroke-color: #5fd9d2;
+  font-size: 64px;
+}
+
+a {
+  color: #ccccd7;
+}
+
+section {
+	top: 240px;
+}
