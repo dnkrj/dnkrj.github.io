@@ -12,6 +12,12 @@ h1 {
   header, section {
     position: fixed;
   }
+
+  section {
+    bottom: 0;
+    margin-bottom: 0;
+    overflow-y: auto;
+  }
 }
 
 ol {
