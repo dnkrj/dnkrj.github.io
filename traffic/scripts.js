@@ -8,6 +8,8 @@ const INNER_RADIUS = 100;
 const ROW_DISTANCE = 15;
 const SLOWDOWN = 5000;
 
+const container = document.querySelector(".trafficPreview");
+
 class Car {
   constructor(t, row, color, opt_following) {
     this.t = t;
@@ -19,7 +21,7 @@ class Car {
     this.element = document.createElement('div');
     this.element.style.color = color;
     this.element.classList.add('car');
-    document.body.appendChild(this.element);
+    container.appendChild(this.element);
   }
   
   updateSpeed() {
@@ -56,7 +58,12 @@ class Car {
 class Leader extends Car {
   constructor(t, row) {
     super(t, row, '#000');
-    window.addEventListener('keydown', () => this.brake());
+    window.addEventListener('keydown', (e) => {
+      this.brake();
+      if (e.code == "Space" && !document.body.classList.contains('pauseTraffic')) {
+        e.preventDefault();
+      }
+    });
   }
 
   updateSpeed() {
@@ -87,6 +94,10 @@ for (let row = 1; row < NUMBER_OF_ROWS + 1; row++) {
 }
 
 const animate = () => {
+  if (document.body.classList.contains('pauseTraffic')) {
+    window.setTimeout(animate, 100);
+    return;
+  }
   cars.forEach(car => car.animate());
   requestAnimationFrame(animate);
 }

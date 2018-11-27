@@ -2,24 +2,45 @@ header, section {
   margin: 20px;
 }
 
-h1 {
-  font-size: 80px;
-}
-
 body {
   background: #000500;
-  color: #9B9ECE;
+  color: #d4d1ff;
+}
+
+body.isTraffic .trafficBackground {
+  opacity: 1;
 }
 
 h1 {
-  -webkit-text-stroke-color: #473BF0;
+  font-size: 80px;
+  -webkit-text-stroke-color: #d4d1ff;
 }
 
 a {
-  color: #9B9ECE;
+  color: #d4d1ff;
 }
 
-.preview {
+.mobileNotice {
+  display: none;
+}
+
+@media only screen and (max-width: 900px) {
+  .mobileNotice {
+    display: block;
+  }
+}
+
+section > p {
+  opacity: 0.5;
+  transition: opacity 0.5s;
+}
+
+p.isAlwaysOn,
+p.isSelected {
+  opacity: 1;
+}
+
+figure {
   position: fixed;
   pointer-events: none;
   top: 0;
@@ -29,6 +50,72 @@ a {
   width: auto;
   margin: 0;
   background-position: center;
-  background-: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: opacity 0.5s;
+  opacity: 0;
+}
+
+figure.isSelected {
+  opacity: 1;
+}
+
+.trafficPreview {
+  background: #34318F;
+  z-index: -1;
+  left: 0;
+}
+
+.googlecalendarPreview {
+  background-image: url('googlecalendar/0.jpg');
+  background-color: #ffffff;
+}
+
+.voioPreview {
+  background-image: url('voio/0.jpg');
+  background-color: #ffffff;
+}
+
+.dissertationPreview {
+  background-image: url('dissertation/0.jpg');
+  background-color: #ffffff;
+}
+
+.assortedgraphicdesignPreview {
+  background-image: url('assortedgraphicdesign/0.jpg');
+  background-size: 600px;
+  background-color: #f9fceb;
+}
+
+.photographyPreview {
+  background-image: url('photography/preview.jpg');
+}
+
+.inaholeinthegroundPreview {
+  background-image: url('inaholeintheground/0.jpg');
+  background-color: #d2d2d2;
+}
+
+.preview {
+  background-image: url('lightingdesign/preview.jpg')
+}
+
+.photographyPreview,
+.preview {
+  background-position: center;
+  background-repeat: repeat;
   background-size: 200px;
+}
+
+.car {
+    position: absolute;
+    padding-left: 210px;
+}
+
+body.pauseTraffic .car {
+  display: none;
+}
+
+.car::after {
+    content: '+';
 }
