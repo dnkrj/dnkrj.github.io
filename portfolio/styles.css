@@ -40,6 +40,10 @@ p.isSelected {
   opacity: 1;
 }
 
+ul {
+  min-height: 100vh;
+}
+
 figure {
   position: fixed;
   pointer-events: none;
