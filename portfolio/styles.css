@@ -41,7 +41,7 @@ p.isSelected {
 }
 
 ul {
-  min-height: 100vh;
+  min-height: calc(100vh - 110px);
 }
 
 figure {
