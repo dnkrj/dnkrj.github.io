@@ -3,6 +3,8 @@ body {
   margin: 0;
   background: #fff7ed;
   color: black;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 header, section {

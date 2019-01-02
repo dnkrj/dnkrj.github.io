@@ -64,9 +64,30 @@ figure.isSelected {
   opacity: 1;
 }
 
+@media only screen and (max-width: 900px) and (orientation: portrait) {
+  figure {
+    left: 0;
+    top: 60vh;
+  }
+
+  ul {
+    margin-bottom: 40vh
+  }
+}
+
+figure video {
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .trafficPreview {
   background: #34318F;
   z-index: -1;
+  top: 0;
   left: 0;
 }
 
@@ -78,6 +99,10 @@ figure.isSelected {
 .voioPreview {
   background-image: url('voio/0.jpg');
   background-color: #ffffff;
+}
+
+.voioPreview video{
+  width: auto;
 }
 
 .dissertationPreview {
