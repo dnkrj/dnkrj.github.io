@@ -64,8 +64,7 @@ a:hover, a:focus {
 
 .wide, img, video {
   grid-column: 1/-1;
-  max-height: 100vh;
-  max-width: 100%;
+  width: 100%;
   justify-self: center;
 }
 
