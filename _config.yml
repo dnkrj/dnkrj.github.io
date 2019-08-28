@@ -1,0 +1,23 @@
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+
+collections:
+  projects:
+    output: true
+    permalink: /:title
+    dark: true
+    light: false
+    images: 0
+    title: ""
+    description: ""
+    medium: ""
+    year: ""
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "project"

@@ -1,0 +1,25 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>{% if page.title %} {{ page.title }} &middot; {% endif %}Daniel Karaj</title>
+    {% if page.description %}<meta name="description" content="{{ page.title }}">{% endif %}
+    <meta name="author" content="Daniel Karaj">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond&display=swap" rel="stylesheet">
+  </head>
+  <body {% if page.dark %}class="isDark"{% elsif page.light %}class="isLight"{% endif %}>
+    {{ content }}
+  </body>
+  {% if page.background %}
+    <style>
+    body {
+      background: {{ page.background }}
+      }
+    </style>
+  {% endif %}
+</html>
