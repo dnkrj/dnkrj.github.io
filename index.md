@@ -15,7 +15,7 @@ layout: default
 
 {% assign sorted_projects = site.projects | sort:"order" %}
 {% for project in sorted_projects %}
-  <section>
+  <section data-href="{{ project.url }}">
     {% if project.wide %}
       {{ project.wide }}
     {% else %}
@@ -27,3 +27,5 @@ layout: default
     <p>{{ project.year}} </p>
   </section>
 {% endfor %}
+
+<script src="index.js"></script>

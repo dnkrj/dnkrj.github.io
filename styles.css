@@ -23,6 +23,10 @@ body.isLight, body.isLight a, body.isLight h1 {
   border-bottom-color: rgba(0, 0, 0, .87);
 }
 
+body.isClickable img {
+  cursor: pointer;
+}
+
 body, header, section, footer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
