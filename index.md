@@ -15,11 +15,7 @@ layout: default
 
 {% assign sorted_projects = site.projects | sort:"order" %}
 {% for project in sorted_projects %}
-  <section
-      data-href="{{ project.url }}"
-      data-images="{{ project.images }}"
-      data-image-root="images/{{ project.title | slugify }}/"
-      data-index="0">
+  <section data-href="{{ project.url }}">
     {% if project.wide %}
       {{ project.wide }}
     {% else %}
