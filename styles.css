@@ -6,7 +6,7 @@ h1, h2, p, li, ul, body, a {
 }
 
 body {
-  font-family: 'EB Garamond', serif;
+  font-family: 'DM Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: rgba(0, 0, 0, .87);
@@ -46,7 +46,7 @@ header, section, footer {
 }
 
 h1, h2, p, li, a {
-  font-size: 20px;
+  font-size: 17px;
   font-weight: normal;
   line-height: 1.5;
 }
