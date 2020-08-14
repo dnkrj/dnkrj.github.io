@@ -52,12 +52,12 @@ h1, h2, p, li, a {
 }
 
 h1 {
-  color: rgba(51, 76, 251, .87);
+  color: rgba(255, 0, 0, .87);
 }
 
 a {
   color: rgba(0, 0, 0, .87);
-  border-bottom: rgba(51, 76, 251, .87) solid 1px;
+  border-bottom: rgba(255, 0, 0, .87) solid 1px;
   transition: opacity 0.2s ease-in-out;
 }
 
