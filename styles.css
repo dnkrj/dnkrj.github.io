@@ -10,7 +10,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: rgba(0, 0, 0, .87);
-  padding: 30px;
+  padding: 120px;
 }
 
 body.isDark, body.isDark a, body.isDark h1 {
@@ -43,6 +43,10 @@ header, section, footer {
   body, header, section, footer {
     grid-template-columns: 1fr;
   }
+
+  body {
+    padding: 30px;
+  }
 }
 
 h1, h2, p, li, a {
@@ -70,6 +74,7 @@ a:hover, a:focus {
   grid-column: 1/-1;
   width: 100%;
   justify-self: center;
+  margin-top: 60px;
 }
 
 .wide {
