@@ -8,6 +8,7 @@ images: 1
 
 wide: <img src="images/dissertation/wide.png">
 
+background: "#ffffff"
 light: true
 order: 40
 ---

@@ -6,6 +6,7 @@ medium: Medium Format and 35mm.
 year: 2015 - 16
 images: 5
 
+background: "#ffffff"
 light: true
 order: 120
 ---

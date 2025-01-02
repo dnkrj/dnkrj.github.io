@@ -6,6 +6,7 @@ medium: NodeJS and OpenCV.
 year: 2015
 images: 4
 
+background: "#ffffff"
 light: true
 order: 30
 ---

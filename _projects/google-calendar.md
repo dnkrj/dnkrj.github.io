@@ -7,6 +7,7 @@ images: 2
 
 wide: <img src="images/google-calendar/wide.png">
 
+background: "#ffffff"
 light: true
 order: 20
 ---
