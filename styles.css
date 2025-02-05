@@ -40,6 +40,10 @@ header, section, footer {
   margin: 10px 0 10px 0;
 }
 
+header {
+  padding-bottom: 120px;
+}
+
 @media only screen and (max-width: 700px) {
   body, header, section, footer {
     grid-template-columns: 1fr;
