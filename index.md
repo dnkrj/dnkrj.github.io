@@ -22,5 +22,3 @@ layout: default
     <p>{{ project.year}} </p>
   </section>
 {% endfor %}
-
-<script src="index.js"></script>
