@@ -13,12 +13,17 @@ layout: default
   </ul>
 </header>
 
-{% assign sorted_projects = site.projects | sort:"order" %}
-{% for project in sorted_projects %}
-  <section data-href="{{ project.url }}">
-    <h2><a href="{{ project.url }}">{{ project.title }}</a></h2>
-    <p>{{ project.description }}</p>
-    <p>{{ project.medium }}</p>
-    <p>{{ project.year}} </p>
+{% assign items = site.projects | concat: site.links %}
+{% assign sorted_items = items | sort:"end" %}
+{% for item in sorted_items reversed %}
+  <section>
+    {% if item.href %}
+      <h2><a href="{{ item.href }}" target="_blank">{{ item.title }}</a></h2>
+    {% else %}
+      <h2><a href="{{ item.url }}">{{ item.title }}</a></h2>
+    {% endif %}
+    <p>{{ item.description }}</p>
+    <p>{{ item.medium }}</p>
+    <p>{{ item.year}} </p>
   </section>
 {% endfor %}

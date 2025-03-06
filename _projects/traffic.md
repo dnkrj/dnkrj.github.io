@@ -3,6 +3,7 @@ title: Traffic
 description: A visual simulation of the effects of braking on Traffic.
 text: This is a visual simulation of the effects of braking on traffic. Each cross represents a car.  Press any key to cause the lead cars to brake. Cars further away from the center brake earlier and less aggressively.
 year: 2017
+end: 2017
 images: 0
 
 wide: <img src="images/traffic/wide.png">
