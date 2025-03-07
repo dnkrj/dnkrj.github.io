@@ -1,5 +1,5 @@
 ---
-title: "Assorted Web Design"
+title: Assorted Web Design
 description: Archive of freelance web design work.
 text: In addition to graphic design projects, I have a taken on a variety of web design work with a focus on simple, pleasing designs.
 medium: HTML, CSS and Javascript.

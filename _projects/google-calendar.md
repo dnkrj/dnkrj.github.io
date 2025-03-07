@@ -1,5 +1,5 @@
 ---
-title: "Google Calendar"
+title: Google Calendar
 description: A rich web application with hundreds of millions of users.
 text: I worked as a front end engineer on Google Calendar for three years. In 2017, we released a much lauded redesign of the UI.<br><br>I worked with Designers, Product Managers and UX Researchers as well as leading small engineering teams to develop functional and beautiful features.
 medium: TypeScript and Wiz.
