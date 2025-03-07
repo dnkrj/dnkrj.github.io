@@ -14,6 +14,7 @@ collections:
     description: ""
     medium: ""
     year: ""
+    end: 0
 
   links:
     output: false
@@ -22,6 +23,7 @@ collections:
     description: ""
     medium: ""
     year: ""
+    end: 0
 
 defaults:
   -
