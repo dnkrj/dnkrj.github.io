@@ -17,8 +17,14 @@ layout: default
 {% assign sorted_items = items | sort:"end" %}
 {% for item in sorted_items reversed %}
   <section>
-    {% if item.href %}
-      <h2><a href="{{ item.href }}" target="_blank">{{ item.title }}</a></h2>
+    {% if item.collection == "links" %}
+      <h2>
+        {% if item.href %}
+          <a href="{{ item.href }}" target="_blank">{{ item.title }}</a>
+        {% else %}
+          {{ item.title }}
+        {% endif %}
+        </h2>
     {% else %}
       <h2><a href="{{ item.url }}">{{ item.title }}</a></h2>
     {% endif %}
